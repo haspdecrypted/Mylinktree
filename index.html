@@ -1,73 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
     <title>myLinktree - Haspdecrypted</title>
-    <link rel="icon" type="image/x-icon" href="./Other files/favicon.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  </head>
-  <body>
-    <div class="clipboard-prompt">✔️ Copied to clipboard!</div>
-    <div class="wrapper">
-      <div class="img-area">
-        <div class="inner-area">
-          <!-- myPic -->
-          <img src="Other files\me-pfp.jpg" alt="Me" />
-        </div>
-      </div>
-      <!-- My title -->
-      <div class="name">Haspdecrypted</div>
-      <div class="about">Software Engineer & Mentor</div>
-      <!-- Different social handles of mine -->
-      <div class="social-icons">
-        <a target="_blank" href="https://github.com/haspdecrypted" class="github"><i class="fab fa-github"></i></a>
-        <a target="_blank" href="https://twitter.com/haspdecrypted" class="twitter"><i class="fab fa-twitter"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/haspdecrypted/" class="linkedin"><i class="fab fa-linkedin"></i></a>
-        <a target="_blank" href="https://www.youtube.com/@devslens/" class="yt"><i class="fab fa-youtube"></i></a>
-        <a target="_blank" href="https://haspdecrypted.hashnode.dev/" class="blog"><i class="fab fa-blogger"></i></a>
-      </div>
-      <!-- Buttons for Reaching me out, Following on Linkedin, Sharing myLinktree  -->
-      <div class="buttons">
-        <button type="button" onclick="window.location.href = 'https://forms.gle/DmV3PYTVEEn1fqg97';">Message</button>
-        <button type="button" onclick="window.location.href = 'https://www.linkedin.com/in/haspdecrypted/';">Follow</button>
-        <button id="shareBtn">
-          <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path d="M13 14h-2a8.999 8.999 0 0 0-7.968 4.81A10.136 10.136 0 0 1 3 18C3 12.477 7.477 8 13 8V3l10 8-10 8v-5z" /></svg
-          >Share
-        </button>
-      </div>
-      <!-- Socials link share button, copies link to clipboard js code -->
-      <div class="social-share">
-        <div class="row">
-          <script>
-            const shareBtn = document.querySelector("#shareBtn");
-            const link = "https://haspdecrypted.github.io/Mylinktree/";
-
-            shareBtn.addEventListener("click", function () {
-              navigator.clipboard.writeText(link).then(
-                function () {
-                  console.log("Link copied to clipboard");
-                },
-                function (err) {
-                  console.error("Failed to copy link: ", err);
-                }
-              );
-            });
-
-            const clipPrompt = document.querySelector(".clipboard-prompt");
-            shareBtn.addEventListener("click", () => {
-              clipPrompt.classList.add("copied-prompt");
-              setTimeout(() => {
-                clipPrompt.classList.remove("copied-prompt");
-              }, 1500);
-            });
-          </script>
-        </div>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <!-- myPic -->
+        <img src="Other files\me-pfp.jpg" alt="Me">
+        
       </div>
     </div>
-  </body>
+    <!-- My title -->
+    <div class="name">Haspdecrypted</div>
+    <div class="about">Software Engineer & Mentor</div>
+    <!-- Different social handles of mine -->
+    <div class="social-icons">
+      <a href="https://github.com/haspdecrypted" class="github"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/haspdecrypted" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/haspdecrypted/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@devslens/" class="yt"><i class="fab fa-youtube"></i></a>
+      <a href="https://haspdecrypted.hashnode.dev/" class="blog"><i class="fab fa-blogger"></i></a>
+    </div>
+    <!-- Buttons for Reaching me out, Following on Linkedin, Sharing myLinktree  -->
+    <div class="buttons">
+      <button type="button" onclick="window.location.href = 'https://forms.gle/DmV3PYTVEEn1fqg97';">Message</button>
+      <button type="button" onclick="window.location.href = 'https://www.linkedin.com/in/haspdecrypted/';">Follow</button>
+      <button id="shareBtn"><img src="Other files/share.png" alt="shareBtn" width="20" height="20" />Share</button>
+    </div>
+    <!-- Socials link share button, copies link to clipboard js code -->
+    <div class="social-share">
+      <div class="row">
+        <script>
+          const shareBtn = document.querySelector("#shareBtn");
+          const link = "https://haspdecrypted.github.io/Mylinktree/";
+
+          shareBtn.addEventListener("click", function() {
+            navigator.clipboard.writeText(link).then(function() {
+              console.log("Link copied to clipboard");
+            }, function(err) {
+              console.error("Failed to copy link: ", err);
+            });
+          });
+        </script>
+
+      </div>
+    </div>
+  </div>
+</body>
 </html>
